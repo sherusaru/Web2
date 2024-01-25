@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <div class="form">
+      <div class="content">
+      <h1>New Employee Registration Form!<span>Sign up before your timer runs out.</span>
+        <span><h2 id="timer">00:00:00</h2></span>
+      </h1>
+      </div>
+      <form id="employeeForm">
+        <div class="section">Personal Details</div>
+        <div class="inner-wrap">
+          <label>Your Full Name <input type="text" name="name"/></label>
+          <label>Address <input type="text" name="address"/></label>
+          <label for="birthday">Date Of Birth<input type="date" id="birthday" name="birthday"/></label>
+          <label>Birth Place <input type="text" name="birthPlace" /></label>
+          <label for="marital" >Marital Status
+            <select id="marital" name="status">
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+            </select>
+          </label>
+          <label>Graduated School <input type="text" name="graduated"/></label>
+          <label> Major Subject <input type="text" name="major"/></label>
+          <label> Computer Skills <input type="text" name="skills"/></label>
+          <label>Nationality <input type="text" name="nationality"/></label>
+          <label for="blood">Blood Group
+            <select id="blood" name="blood">
+              <option value="group A">A</option>
+              <option value="group B">B</option>
+              <option value="group O">O</option>
+              <option value="group AB">AB</option>
+            </select></label>
+          <label for="gender">Gender</label>
+          <input type="radio" name="sex" id="male" value="Male"/> Male
+          <input type="radio" name="sex" id="female" value="Female"/>Female
+        </div>
+        <div class="section">Email & Phone</div>
+        <div class="inner-wrap">
+          <label for="email">Email Address <input type="email" name="email" id="email" placeholder="@gmail.com"/></label>
+          <label>Home Phone <input type="tel" name="homePhone" placeholder="071-123456"/></label>
+          <label>Mobile Phone
+            <input
+              type="tel"
+              name="mobilePhone"
+              required
+              placeholder="Format: 123-4567-8901"/></label>
+        </div>
+        <div>
+          <input type="checkbox" name="terms"/>You agree to our Terms and Policy.<br/><br/>
+          <input type="button" value="Submit" onclick="submitingForm()"/>
+        </div>
+      </form>
+      <textarea id="output" readonly style="width: 100%; height: 250px"></textarea>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
